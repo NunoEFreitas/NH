@@ -1,13 +1,11 @@
 package com.nh.dao;
 
 import java.io.Serializable;
-<<<<<<< HEAD
 
 import java.lang.reflect.ParameterizedType;
 
-=======
 import java.lang.reflect.ParameterizedType;
->>>>>>> origin/master
+
 import org.hibernate.Criteria;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -41,15 +39,11 @@ public abstract class AbstractDao<PK extends Serializable, T> {
 	public void delete(T entity) {
 		getSession().delete(entity);
 	}
-<<<<<<< HEAD
-	
-=======
 
         public void deleteById(PK id){
                 getSession().delete(getByKey(id));
         }
-         
->>>>>>> origin/master
+        
 	protected Criteria createEntityCriteria(){
 		return getSession().createCriteria(persistentClass);
 	}
