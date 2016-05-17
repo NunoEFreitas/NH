@@ -68,7 +68,7 @@ public class User implements Serializable {
     
     @NotEmpty
     @ManyToOne()
-    @JoinColumn(name="userProfile_id_id")
+    @JoinColumn(name="userProfile_id")
     private UserProfile userProfile_id;
 
 
