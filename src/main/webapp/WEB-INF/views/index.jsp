@@ -15,5 +15,9 @@
     </head>
     <body>
         <p>Demo</p>
+        <a href="newproduct">New Product</a><br>
+        <a href="newproducttype">New Product Type</a><br>
+        <a href="listproducts">List Products</a><br>
+        <a href="listproducttypes">List Product Types</a><br>
     </body>
 </html>
