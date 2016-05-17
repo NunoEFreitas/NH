@@ -40,6 +40,7 @@ CREATE TABLE IF NOT EXISTS `nh_bd`.`users` (
   `email` VARCHAR(100) NOT NULL,
   `nif` INT NOT NULL,
   `userProfile_id` INT NOT NULL,
+  `password` VARCHAR(45) NOT NULL,
   PRIMARY KEY (`id`),
   INDEX `fk_users_userProfile_idx` (`userProfile_id` ASC),
   CONSTRAINT `fk_users_userProfile`
@@ -120,6 +121,7 @@ CREATE TABLE IF NOT EXISTS `nh_bd`.`order` (
   `orderType_id` INT NOT NULL,
   `product_id` INT NOT NULL,
   `users_id` INT NOT NULL,
+  `quantity` INT NOT NULL,
   PRIMARY KEY (`id`, `product_id`),
   INDEX `fk_order_orderStatus1_idx` (`orderStatus_id` ASC),
   INDEX `fk_order_orderType1_idx` (`orderType_id` ASC),
