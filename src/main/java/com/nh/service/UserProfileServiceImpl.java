@@ -23,7 +23,7 @@ import org.springframework.transaction.annotation.Transactional;
 public class UserProfileServiceImpl implements UserProfileService{
     
     @Autowired
-     private UserProfileDao userProfile;
+    private UserProfileDao userProfile;
 
     public void saveUserProfile(UserProfile userType) {
         this.userProfile.addUserProfile(userType);

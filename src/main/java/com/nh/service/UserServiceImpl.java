@@ -19,7 +19,7 @@ import org.springframework.stereotype.Service;
 public class UserServiceImpl  implements  UserService{
     
     @Autowired
-    private UserDao user;
+   private UserDao user;
 
     public void saveUser(User user) {
        this.user.registerUser(user);
