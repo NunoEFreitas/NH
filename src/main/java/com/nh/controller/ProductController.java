@@ -60,14 +60,12 @@ public class ProductController {
         }
         pService.saveProduct(product);
 	model.addAttribute("message", "Product " + product.getDesignation() + " registered successfully");
-        return "listproducts";
+        return "/";
     }
         
     @RequestMapping(value = { "/edit-{id}-product" }, method = RequestMethod.GET)
     public String editProduct(@PathVariable int id, ModelMap model,HttpSession session) {
         Product product = pService.findById(id);
-        List<ProductType> pType = ptService.findAllProductTypes();
-        model.addAttribute("pType",pType);
 	model.addAttribute("product", product);
 	model.addAttribute("edit", true);
 	return "newproduct";
@@ -76,7 +74,7 @@ public class ProductController {
     @RequestMapping(value = { "/edit-{id}-product" }, method = RequestMethod.POST)
     public String updateProduct(@Valid Product product,BindingResult result,ModelMap model, @PathVariable int id,HttpSession session) {
         if (result.hasErrors()) {
-            return "newproduct";
+            return "redirect:/newproduct";
 	}
         pService.updateProduct(product);
         model.addAttribute("message", "Material " + product.getDesignation() + " updated successfully");
@@ -115,7 +113,7 @@ public class ProductController {
         }
         ptService.saveProduct(ptype);
 	model.addAttribute("message", "Product Type" + ptype.getDesignation() + " registered successfully");
-        return "listproducttypes";
+        return "/";
     }
         
     @RequestMapping(value = { "/edit-{id}-producttype" }, method = RequestMethod.GET)

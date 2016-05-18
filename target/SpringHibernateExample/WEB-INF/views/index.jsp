@@ -19,5 +19,6 @@
         <a href="newproducttype">New Product Type</a><br>
         <a href="listproducts">List Products</a><br>
         <a href="listproducttypes">List Product Types</a><br>
+        ${message}
     </body>
 </html>

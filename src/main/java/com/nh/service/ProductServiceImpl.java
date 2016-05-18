@@ -36,7 +36,7 @@ public class ProductServiceImpl implements ProductService{
 	if(entity!=null){
             entity.setDesignation(product.getDesignation());
             entity.setPrice(product.getPrice());
-            entity.setProcuctType(product.getProcuctType());
+            entity.setProductType(product.getProductType());
             entity.setQuantity(product.getQuantity());
 	}
     }
