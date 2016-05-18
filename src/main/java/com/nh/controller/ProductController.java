@@ -60,7 +60,7 @@ public class ProductController {
         }
         pService.saveProduct(product);
 	model.addAttribute("message", "Product " + product.getDesignation() + " registered successfully");
-        return "/";
+        return "index";
     }
         
     @RequestMapping(value = { "/edit-{id}-product" }, method = RequestMethod.GET)
@@ -115,7 +115,7 @@ public class ProductController {
         }
         ptService.saveProductType(ptype);
 	model.addAttribute("message", "Product Type" + ptype.getDesignation() + " registered successfully");
-        return "/";
+        return "index";
     }
         
     @RequestMapping(value = { "/edit-{id}-producttype" }, method = RequestMethod.GET)

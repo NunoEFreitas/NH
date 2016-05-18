@@ -7,6 +7,9 @@ package com.nh.dao;
 
 import com.nh.model.OrderType;
 import java.util.List;
+import org.hibernate.Criteria;
+import org.hibernate.Query;
+import org.hibernate.criterion.Restrictions;
 import org.springframework.stereotype.Repository;
 
 /**
@@ -17,23 +20,28 @@ import org.springframework.stereotype.Repository;
 public class OrderTypeDaoImpl extends AbstractDao<Integer, OrderType> implements OrderTypeDao{
 
     public OrderType findById(int id) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return getByKey(id);
     }
 
     public void saveOrderType(OrderType orderType) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        persist(orderType);
     }
 
     public void deleteOrderTypeById(int id) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        Query query = getSession().createSQLQuery("delete from orderType where id = :id");
+	query.setString("id", Integer.toString(id));
+        query.executeUpdate();
     }
 
     public List<OrderType> findAllOrderTypes() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        Criteria criteria = createEntityCriteria();
+        return (List<OrderType>) criteria.list();
     }
 
     public OrderType findOrderTypeByDesignation(String designation) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        Criteria criteria = createEntityCriteria();
+        criteria.add(Restrictions.eq("designation", designation));
+        return (OrderType) criteria.uniqueResult();
     }
     
 }

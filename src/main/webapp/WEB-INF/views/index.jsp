@@ -19,6 +19,10 @@
         <a href="newproducttype">New Product Type</a><br>
         <a href="listproducts">List Products</a><br>
         <a href="listproducttypes">List Product Types</a><br>
+        <a href="newordertype">New Order Type</a><br>
+        <a href="listordertypes">List Order Types</a><br>
+        <a href="neworderstatus">New Order Status</a><br>
+        <a href="listorderstatus">List Order Status</a><br>
         ${message}
     </body>
 </html>

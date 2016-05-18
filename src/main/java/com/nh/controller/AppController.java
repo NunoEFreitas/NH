@@ -22,5 +22,10 @@ public class AppController {
 		return "index";
 	}
         
+        @RequestMapping(value = {"/index"}, method = RequestMethod.GET)
+	public String indexCall(HttpSession session,ModelMap model) {
+		return "index";
+	}
+        
         
 }

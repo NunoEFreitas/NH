@@ -5,10 +5,24 @@
  */
 package com.nh.service;
 
+import com.nh.model.OrderStatus;
+import java.util.List;
+
 /**
  *
  * @author nfreitas
  */
-public class OrderStatusService {
+public interface OrderStatusService {
     
+        OrderStatus findById(int id);
+
+	void saveOrderStatus(OrderStatus orderStatus);
+        
+        void updateOrderStatus(OrderStatus orderStatus);
+        
+        void deleteOrderStatusById(int id);
+	
+	List<OrderStatus> findAllOrderStatus();
+        
+        OrderStatus findOrderStatusByDesignation(String designation);    
 }

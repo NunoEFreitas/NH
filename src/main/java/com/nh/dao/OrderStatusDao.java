@@ -16,7 +16,7 @@ public interface OrderStatusDao {
     
         OrderStatus findById(int id);
 
-	void saveOrderStatus(OrderStatus oderStatus);
+	void saveOrderStatus(OrderStatus orderStatus);
         
         void deleteOrderStatusById(int id);
 	
