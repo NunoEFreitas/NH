@@ -28,7 +28,7 @@ public class Product {
     private String designation;
     private int quantity;
     private float price;
-    private ProductType procuctType;
+    private ProductType productType;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -68,11 +68,11 @@ public class Product {
 
     @ManyToOne()
     @JoinColumn(name="productType_id")
-    public ProductType getProcuctType() {
-        return procuctType;
+    public ProductType getProductType() {
+        return productType;
     }
-    public void setProcuctType(ProductType procuctType) {
-        this.procuctType = procuctType;
+    public void setProductType(ProductType productType) {
+        this.productType = productType;
     }
     
     
