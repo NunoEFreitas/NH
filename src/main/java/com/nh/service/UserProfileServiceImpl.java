@@ -9,7 +9,6 @@ package com.nh.service;
 import com.nh.dao.UserProfileDao;
 import com.nh.model.UserProfile;
 import java.util.List;
-import org.hibernate.usertype.UserType;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
