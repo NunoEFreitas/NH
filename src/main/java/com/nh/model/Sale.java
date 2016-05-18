@@ -48,15 +48,15 @@ public class Sale implements Serializable{
    private boolean paid;
    
    @OneToMany
-   @JoinColumn(name="order_id")
+   @JoinColumn(name="order_id", referencedColumnName = "id")
    private Order order;
    
    @OneToMany
-   @JoinColumn(name="orderProduct_product_id")
+   @JoinColumn(name="order_product_product_id", referencedColumnName = "product_id")
    private Order orderProduct;
    
    @OneToMany
-   @JoinColumn(name="paymentType_id")
+   @JoinColumn(name="paymentType_id", referencedColumnName = "id")
    private PaymentType paymentType;
 
     public Sale() {
@@ -140,6 +140,34 @@ public class Sale implements Serializable{
      */
     public void setPaymentType(PaymentType paymentType) {
         this.paymentType = paymentType;
+    }
+
+    /**
+     * @return the order
+     */
+    public Order getOrder() {
+        return order;
+    }
+
+    /**
+     * @param order the order to set
+     */
+    public void setOrder(Order order) {
+        this.order = order;
+    }
+
+    /**
+     * @return the orderProduct
+     */
+    public Order getOrderProduct() {
+        return orderProduct;
+    }
+
+    /**
+     * @param orderProduct the orderProduct to set
+     */
+    public void setOrderProduct(Order orderProduct) {
+        this.orderProduct = orderProduct;
     }
    
    
