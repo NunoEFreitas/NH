@@ -66,6 +66,8 @@ public class ProductController {
     @RequestMapping(value = { "/edit-{id}-product" }, method = RequestMethod.GET)
     public String editProduct(@PathVariable int id, ModelMap model,HttpSession session) {
         Product product = pService.findById(id);
+        List<ProductType> pType = ptService.findAllProductTypes();
+        model.addAttribute("pType", pType);
 	model.addAttribute("product", product);
 	model.addAttribute("edit", true);
 	return "newproduct";
@@ -78,7 +80,7 @@ public class ProductController {
 	}
         pService.updateProduct(product);
         model.addAttribute("message", "Material " + product.getDesignation() + " updated successfully");
-	return "listproducts";
+	return "redirect:/listproducts";
     }
         
     @RequestMapping(value = { "/delete-{id}-product" }, method = RequestMethod.GET)
@@ -131,7 +133,7 @@ public class ProductController {
 	}
         ptService.updateProductType(pType);
         model.addAttribute("message", "Material " + pType.getDesignation() + " updated successfully");
-	return "listproducttypes";
+	return "redirect:/listproducttypes";
     }
         
     @RequestMapping(value = { "/delete-{id}-producttype" }, method = RequestMethod.GET)

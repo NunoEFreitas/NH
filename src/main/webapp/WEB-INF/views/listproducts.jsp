@@ -35,6 +35,7 @@
 	<a href="<c:url value='/newproduct' />">Add new Product</a>
         <br>
         <a href="/NH/">Home</a>
+        ${message}
     </body>
 </html>
 
