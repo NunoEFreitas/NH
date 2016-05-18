@@ -27,8 +27,8 @@ public class ProductTypeServiceImpl implements ProductTypeService{
         return dao.findById(id);
     }
 
-    public void saveProduct(ProductType productType) {
-        dao.saveProduct(productType);
+    public void saveProductType(ProductType productType) {
+        dao.saveProductType(productType);
     }
 
     public void updateProductType(ProductType productType) {

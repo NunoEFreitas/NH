@@ -5,10 +5,23 @@
  */
 package com.nh.dao;
 
+import com.nh.model.OrderType;
+import java.util.List;
+
 /**
  *
  * @author nfreitas
  */
-public class OrderTypeDao {
+public interface OrderTypeDao {
+    
+        OrderType findById(int id);
+
+	void saveOrderType(OrderType orderType);
+        
+        void deleteOrderTypeById(int id);
+	
+	List<OrderType> findAllOrderTypes();
+        
+        OrderType findOrderTypeByDesignation(String designation);
     
 }

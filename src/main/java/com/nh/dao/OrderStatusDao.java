@@ -5,10 +5,23 @@
  */
 package com.nh.dao;
 
+import com.nh.model.OrderStatus;
+import java.util.List;
+
 /**
  *
  * @author nfreitas
  */
-public class OrderStatusDao {
+public interface OrderStatusDao {
+    
+        OrderStatus findById(int id);
+
+	void saveOrderStatus(OrderStatus oderStatus);
+        
+        void deleteOrderStatusById(int id);
+	
+	List<OrderStatus> findAllOrderStatus();
+        
+        OrderStatus findOrderStatusByDesignation(String designation);
     
 }

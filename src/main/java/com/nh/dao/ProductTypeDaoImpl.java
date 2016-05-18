@@ -24,7 +24,7 @@ public class ProductTypeDaoImpl extends AbstractDao<Integer, ProductType> implem
         return getByKey(id);
     }
 
-    public void saveProduct(ProductType productType) {
+    public void saveProductType(ProductType productType) {
          persist(productType);
     }
 

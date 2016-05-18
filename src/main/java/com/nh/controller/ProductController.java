@@ -113,7 +113,7 @@ public class ProductController {
             model.addAttribute("error", "Product Type already registered with " + ptype.getId() + " ID");
             return "newproducttype";
         }
-        ptService.saveProduct(ptype);
+        ptService.saveProductType(ptype);
 	model.addAttribute("message", "Product Type" + ptype.getDesignation() + " registered successfully");
         return "/";
     }

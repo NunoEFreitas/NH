@@ -5,10 +5,35 @@
  */
 package com.nh.dao;
 
+import com.nh.model.OrderType;
+import java.util.List;
+import org.springframework.stereotype.Repository;
+
 /**
  *
  * @author nfreitas
  */
-public class OrderTypeDaoImpl {
+@Repository("orderTypeDao")
+public class OrderTypeDaoImpl extends AbstractDao<Integer, OrderType> implements OrderTypeDao{
+
+    public OrderType findById(int id) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public void saveOrderType(OrderType orderType) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public void deleteOrderTypeById(int id) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public List<OrderType> findAllOrderTypes() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public OrderType findOrderTypeByDesignation(String designation) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
 }

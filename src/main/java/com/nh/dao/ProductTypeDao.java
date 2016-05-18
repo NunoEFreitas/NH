@@ -16,7 +16,7 @@ public interface ProductTypeDao {
     
         ProductType findById(int id);
 
-	void saveProduct(ProductType productType);
+	void saveProductType(ProductType productType);
         
         void deleteProductTypeById(int id);
 	
