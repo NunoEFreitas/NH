@@ -32,7 +32,7 @@ public class UserDaoImpl extends AbstractDao<Integer, User> implements UserDao{
       return (User) criteria.uniqueResult();
     }
 
-    public User findUserByNif(long nif) {
+    public User findUserByNif(int nif) {
          Criteria criteria = createEntityCriteria();
          criteria.add(Restrictions.eq("nif", nif));
          return (User) criteria.uniqueResult(); 
@@ -52,7 +52,7 @@ public class UserDaoImpl extends AbstractDao<Integer, User> implements UserDao{
             entity.setNif(user.getNif());
             entity.setPassword(user.getPassword());
             entity.setTelephone(user.getTelephone());
-            entity.setUserProfile_id(user.getUserProfile_id());
+            entity.setUserProfile(user.getUserProfile());
 	}
     }
 

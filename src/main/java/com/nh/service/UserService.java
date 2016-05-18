@@ -15,7 +15,7 @@ import java.util.List;
 public interface UserService {
     void saveUser(User user);
     User findUserById(int id);
-    User findUserByNif(long nif);
+    User findUserByNif(int nif);
     User findUserByEmail(String email);
     void updateUser(User user);
     List<User> listAllUsers();

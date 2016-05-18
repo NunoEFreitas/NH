@@ -15,6 +15,7 @@ import javax.persistence.Table;
 import javax.validation.constraints.Size;
 import org.hibernate.validator.constraints.NotEmpty;
 
+
 /**
  *
  * @author hvsousa
@@ -22,13 +23,14 @@ import org.hibernate.validator.constraints.NotEmpty;
 @Entity
 @Table(name="userprofile")
 public class UserProfile implements Serializable {
+    
    @Id
    @GeneratedValue(strategy = GenerationType.IDENTITY )
    @Column(name="id")
    private int id;
    
    @NotEmpty
-   @Size(min=4,max=45)
+   @Size(min=5, max=40)
    @Column(name="designation")
    private String designation;
 

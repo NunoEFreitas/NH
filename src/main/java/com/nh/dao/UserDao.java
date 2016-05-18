@@ -17,7 +17,7 @@ public interface UserDao {
     void registerUser(User user);
     User findUserById(int id);
     User findUserByEmail(String email);
-    User findUserByNif(long nif);
+    User findUserByNif(int nif);
     List<User> listUsers();
     void updateUser(User user);
     void deleteUser(int id);

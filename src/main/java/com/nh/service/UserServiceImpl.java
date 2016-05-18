@@ -31,10 +31,6 @@ public class UserServiceImpl  implements  UserService{
        return this.user.findUserById(id);
     }
 
-    public User findUserByNif(long nif) {
-        return this.user.findUserByNif(nif);
-    }
-
     public User findUserByEmail(String email) {
         return this.user.findUserByEmail(email);
     }
@@ -50,5 +46,11 @@ public class UserServiceImpl  implements  UserService{
     public void deleteUser(int id) {
        this.user.deleteUser(id);
     }
+
+    public User findUserByNif(int nif) {
+        return this.user.findUserByNif(nif);
+    }
+
+   
     
 }
