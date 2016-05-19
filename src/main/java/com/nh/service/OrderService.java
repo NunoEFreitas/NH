@@ -5,10 +5,38 @@
  */
 package com.nh.service;
 
+import com.nh.model.Order;
+import com.nh.model.OrderStatus;
+import com.nh.model.OrderType;
+import com.nh.model.Product;
+import com.nh.model.User;
+import java.util.Date;
+import java.util.List;
+
 /**
  *
  * @author nfreitas
  */
-public class OrderService {
+public interface OrderService {
+    
+        Order findById(int id);
+
+	void saveOrder(Order order);
+        
+        void updateOrder(Order order);
+        
+        void deleteOrderById(int id);
+	
+	List<Order> findAllOrders();
+        
+        List<Order> findOrdersByStatus(OrderStatus orderStatus);
+        
+        List<Order> findOrdersByType(OrderType orderType);
+        
+        List<Order> findOrdersByProduct(Product product);
+        
+        List<Order> findOrdersByDateIn(Date date);
+        
+        List<Order> findOrdersByUser(User user);
     
 }

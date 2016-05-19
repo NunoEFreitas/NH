@@ -23,6 +23,8 @@
         <a href="listordertypes">List Order Types</a><br>
         <a href="neworderstatus">New Order Status</a><br>
         <a href="listorderstatus">List Order Status</a><br>
+        <a href="neworder">New Order</a><br>
+        <a href="listorders">List Orders</a><br>
         ${message}
     </body>
 </html>
